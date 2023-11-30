@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+
+int main() {
+    double startingDeposit;
+    double interestRate;
+    int years;
+
+    // Ввод данных с клавиатуры
+    std::cout << "Введите начальный вклад: ";
+    std::cin >> startingDeposit;
+
+    std::cout << "Введите годовую процентную ставку: ";
+    std::cin >> interestRate;
+
+    std::cout << "Введите срок вклада (в годах): ";
+    std::cin >> years;
+
+    // Расчет общей суммы остатка по накопительному счету
+    double totalAmount = startingDeposit * std::pow(1 + (interestRate / 100), years);
+
+    // Вывод результатов
+    std::cout << "Общая сумма остатка по накопительному счету: " << totalAmount << std::endl;
+
+    return 0;
+}
+
+
